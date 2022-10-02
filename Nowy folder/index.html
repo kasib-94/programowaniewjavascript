@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <div id="inputs">
+<input type="text" id="input1" onchange=change()>
+<input type="text" id="input2" onchange=change()>
+<input type="text" id="input3" onchange=change()>
+<input type="text" id="input4" onchange=change()>
+</div>
+<button onclick=przelicz()>Przelicz</button>
+<div id="result">
+<div id="result1"></div>
+<div id="result2"></div>
+<div id="result3"></div>
+<div id="result4"></div>
+
+</div>
+<button onclick=addField()>dodaj</button>
+
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+function przelicz(p1, p2) {
+   
+  
+   let arr = [ parseInt(document.getElementById("input1").value) ,
+   parseInt(document.getElementById("input2").value) ,
+   parseInt(document.getElementById("input3").value) ,
+   parseInt(document.getElementById("input4").value) ]
+
+  console.log(typeof(arr[1]))
+
+ 
+document.getElementById("result1").textContent= parseInt(arr[0])+ parseInt(arr[2])  + parseInt(arr[1])+parseInt(arr[3]);
+ document.getElementById("result2").textContent="Minimalna:"+  Math.min(arr[0] ,arr[1] ,arr[2],arr[3]);
+ document.getElementById("result3").textContent="Maksymalna:"+  Math.max(arr[0], arr[1], arr[2],arr[3]);
+ document.getElementById("result4").textContent="Średnia:"+  ((arr[0])+ parseInt(arr[2])  + parseInt(arr[1])+parseInt(arr[3]))/arr.length;
+}
+function change(){
+    if(document.getElementById("input1").value.length!= 0 &&document.getElementById("input2").value.length!= 0 &&document.getElementById("input3").value.length!= 0 &&document.getElementById("input4").value.length!= 0 ){
+        przelicz();
+    }
+}
+function addField(){
+    getElementById("result").
+}
+
+</script>
